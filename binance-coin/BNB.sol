@@ -112,7 +112,7 @@ contract BNB is SafeMath{
 		if (_value <= 0) throw; 
         balanceOf[msg.sender] = SafeMath.safeSub(balanceOf[msg.sender], _value);                      // Subtract from the sender
         totalSupply = SafeMath.safeSub(totalSupply,_value);                                // Updates totalSupply
-        Burn(msg.sender, _value);
+        Burn(msg.sender, _value); 
         return true;
     }
 	
